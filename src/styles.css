@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: #132743 !important;
+    color:#fff !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --border-color:#a8a8a83d;
+    --second-font-color:#949cb0;
+    --bg-light:#24baef;
+    --bg-dark:#132743;
+}
+input
+{
+    background-color: transparent !important;
+    border-color: var(--border-color) !important;
+    color:#fff !important;
+}
+.cusror-pointer
+{
+    cursor:pointer !important
+}
+
+.brd
+{
+    height: 1px;
+    background-color: var(--border-color);
+}
+a{
+    color:#fff;
+    text-decoration: none !important;
+}
+a h3:hover
+{
+    color:#fff;
+}
+a h3
+{
+   color:#fff; 
+}
+.height
+{
+    height: 243px;
+}

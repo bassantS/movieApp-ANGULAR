@@ -1,0 +1,55 @@
+ 
+<div class="row">
+    <div class="col-md-4 d-flex align-items-center">
+       <div>
+        <div class="brd w-25 mb-4"></div>
+        <h2>Trending <br/> Movies<br/> To Watch Right Now</h2>
+        <p class="text-muted">most watched movies by day</p>
+        <div class="brd w-100 mt-4"></div>
+       </div>
+    </div>
+    <div *ngFor="let movie of trendingMovies" class="col-md-2">
+        <div class="movie">
+            <a [routerLink]="['/moviedetails',movie.id]">
+                <img class="img-fluid" [src]="imagePrefix+movie.poster_path" alt="">
+                <h3 class="h6 mb-3">{{movie.title|watch}}</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 d-flex align-items-center">
+       <div>
+        <div class="brd w-25 mb-4"></div>
+        <h2>Trending <br/> Tv<br/> To Watch Right Now</h2>
+        <p class="text-muted">most watched tv by day</p>
+        <div class="brd w-100 mt-4"></div>
+       </div>
+    </div>
+    <div *ngFor="let tv of trendingTv" class="col-md-2">
+        <div class="movie">
+            <a routerLink="['/moviedetails',tv.id]">
+                <img class="img-fluid" [src]="imagePrefix+tv.poster_path" alt="">
+                <h3 class="h6 mb-3">{{tv.title}}</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 d-flex align-items-center">
+       <div>
+        <div class="brd w-25 mb-4"></div>
+        <h2>Trending <br/> persons<br/> To Watch Right Now</h2>
+        <p class="text-muted">most watched person by day</p>
+        <div class="brd w-100 mt-4"></div>
+       </div>
+    </div>
+    <div *ngFor="let person of trendingPerson" class="col-md-2">
+        <div class="movie">
+            <img class="img-fluid" [src]="person.profile_path" alt="">
+            <h3 class="h6 mb-3">{{person.title}}</h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<header class="vh-100 d-flex align-items-center">
+    <div class="container">
+        <owl-carousel-o [options]="customOptions">
+
+            <ng-container *ngFor="let Person of trendingPerson">
+              <ng-template carouselSlide [id]="Person.id">
+                <img class="height" [src]="Person.profile_path">
+              </ng-template>
+            </ng-container>
+        
+          </owl-carousel-o>
+        
+    </div>
+</header>

@@ -1,0 +1,23 @@
+<div class="row py-3 justify-content-center">
+    <div class="p-3">
+        <input type="text"[(ngModel)]="term" class="form-control text-white" placeholder="search by tv name ..." name="" id="">
+
+    </div>
+
+    <div *ngFor="let tv of trendingTv|tvSearch:term" class="col-md-2">
+        <div class="tv">
+            <a [routerLink]="['/tvdetails',tv.id]">
+                <img class="img-fluid" [src]="imagePrefix+tv.poster_path" alt="">
+                <h3 class="h6 mb-3">{{tv.name|watch}}</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="p-5 d-flex justify-content-center">
+    <nav aria-label="...">
+        <ul class="pagination pagination-sm">
+          <li class="cusror-pointer" *ngFor="let page of pages" (click)="tvPagination(page)" class="page-item"><a class="page-link bg-transparent cusror-pointer text-white">{{page}}</a></li>
+        </ul>
+      </nav>
+</div>
